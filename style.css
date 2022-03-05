@@ -273,6 +273,12 @@ h2 {
   html {
     font-size: 50%;
   }
+  nav {
+    display: flex;
+    flex-direction: column;
+    margin: 0 1rem;
+    gap: 2rem;
+  }
   .form {
     flex-direction: column;
     align-items: center;
@@ -280,21 +286,57 @@ h2 {
   h2 {
     text-align: center;
   }
+  .inputs {
+    width: 90%;
+  }
 
   .inputs__user,
   .inputs__pin {
-    padding: 1rem 0;
+    width: 40%;
+    padding: 2rem;
+  }
+  .inputs__user::placeholder,
+  .inputs__pin::placeholder {
+    color: var(--secondary-font-color);
+    font-size: 1.6rem;
   }
   .form__input--set {
     width: 100%;
   }
+  .balance {
+    margin-top: 2rem;
+    flex-direction: column;
+  }
+  .balance__date {
+    position: static;
+  }
   .app {
-    grid-template-columns: 65% 35%;
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-rows: 15rem auto auto 3rem 3rem;
+    grid-template-columns: 55% 45%;
+    grid-template-areas:
+      " balance balance"
+      " movements movements"
+      "transactions transactions"
+      "summary summary"
+      "logout logout";
+    gap: 2rem;
+  }
+  .transaction {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .summary {
+    flex-wrap: wrap;
+    margin: 1rem;
   }
   .summary__amount {
     font-size: 2rem;
   }
   .logout {
     font-size: 1rem;
+    margin: 0 auto;
   }
 }

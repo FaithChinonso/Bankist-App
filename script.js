@@ -32,7 +32,7 @@ const containerApp = document.querySelector(".app");
 
 const acc1 = {
   user: "Faith Umunnakwe",
-  pin: 2288,
+  pin: 1111,
   interestRate: 1.2,
   location: "Nigeria",
   movements: [200, 455.23, -306.5, 25000, -642.21, -133.9, 79.97, 1300],
